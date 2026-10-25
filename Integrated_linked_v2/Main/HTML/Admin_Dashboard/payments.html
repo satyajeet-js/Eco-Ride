@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bicycles - Eco-Ride Admin</title>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+<link rel="stylesheet" href="../../CSS/admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav>
+
+<ul>
+
+<li class="admin-logo">
+
+<a href="index.html">
+
+<div class="logo-box">
+<span class="material-symbols-outlined">shield</span>
+</div>
+
+<div class="logo-text">
+
+<span class="logo-title">
+Admin Panel
+</span>
+
+<span class="logo-subtitle">
+Eco-Ride Control
+</span>
+
+</div>
+
+</a>
+
+</li>
+
+
+<li class="sidebar-link">
+<a href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="users.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Users</span>
+</a>
+</li>
+
+
+<li class="sidebar-link ">
+<a href="bicycles.html">
+<span class="material-symbols-outlined">directions_bike</span>
+<span>Bicycles</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="stations.html">
+<span class="material-symbols-outlined">location_on</span>
+<span>Stations</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="rides.html">
+<span class="material-symbols-outlined">route</span>
+<span>Rides</span>
+</a>
+</li>
+
+
+<li class="sidebar-link active">
+<a href="payments.html">
+<span class="material-symbols-outlined">credit_card</span>
+<span>Payments</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="maintenance.html">
+<span class="material-symbols-outlined">build</span>
+<span>Maintenance</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="analytics.html">
+<span class="material-symbols-outlined">analytics</span>
+<span>Analytics</span>
+</a>
+</li>
+
+
+<li class="back-user">
+
+<a href="../Index/index.html">
+
+<span class="material-symbols-outlined">
+arrow_back
+</span>
+
+<span>
+Back to User
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main class="payments-main">
+
+    <!-- PAGE HEADER -->
+    <div class="payments-header">
+
+        <h1>Payments</h1>
+
+        <p>₹135 total revenue collected</p>
+
+    </div>
+
+
+    <!-- PAYMENT SUMMARY CARDS -->
+
+    <section class="payment-cards">
+
+
+        <!-- TOTAL REVENUE -->
+
+        <div class="payment-card">
+
+            <div class="payment-icon revenue-icon">
+
+                <span class="material-symbols-outlined">
+                    currency_rupee
+                </span>
+
+            </div>
+
+            <div class="payment-card-content">
+
+                <h2>₹135</h2>
+
+                <p>Total Revenue</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRANSACTIONS -->
+
+        <div class="payment-card">
+
+            <div class="payment-icon transaction-icon">
+
+                <span class="material-symbols-outlined">
+                    credit_card
+                </span>
+
+            </div>
+
+            <div class="payment-card-content">
+
+                <h2>5</h2>
+
+                <p>Transactions</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AVERAGE FARE -->
+
+        <div class="payment-card">
+
+            <div class="payment-icon fare-icon">
+
+                <span class="material-symbols-outlined">
+                    sell
+                </span>
+
+            </div>
+
+            <div class="payment-card-content">
+
+                <h2>₹27</h2>
+
+                <p>Avg. Fare</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PENDING -->
+
+        <div class="payment-card">
+
+            <div class="payment-icon pending-icon">
+
+                <span class="material-symbols-outlined">
+                    history
+                </span>
+
+            </div>
+
+            <div class="payment-card-content">
+
+                <h2>0</h2>
+
+                <p>Pending</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAYMENT TABLE -->
+
+    <div class="payments-table-container">
+
+        <table class="payments-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>RIDE ID</th>
+
+                    <th>ROUTE</th>
+
+                    <th>AMOUNT</th>
+
+                    <th>METHOD</th>
+
+                    <th>STATUS</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- PAYMENT 1 -->
+
+                <tr>
+
+                    <td class="payment-ride-id">
+                        RD-901
+                    </td>
+
+                    <td>
+                        FC Road → Deccan
+                    </td>
+
+                    <td class="payment-amount">
+                        ₹27
+                    </td>
+
+                    <td>
+                        UPI / Google Pay
+                    </td>
+
+                    <td>
+
+                        <span class="payment-status successful">
+                            Successful
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- PAYMENT 2 -->
+
+                <tr>
+
+                    <td class="payment-ride-id">
+                        RD-902
+                    </td>
+
+                    <td>
+                        Kothrud → JM Road
+                    </td>
+
+                    <td class="payment-amount">
+                        ₹45
+                    </td>
+
+                    <td>
+                        Wallet
+                    </td>
+
+                    <td>
+
+                        <span class="payment-status successful">
+                            Successful
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- PAYMENT 3 -->
+
+                <tr>
+
+                    <td class="payment-ride-id">
+                        RD-903
+                    </td>
+
+                    <td>
+                        Shivajinagar → FC Road
+                    </td>
+
+                    <td class="payment-amount">
+                        ₹15
+                    </td>
+
+                    <td>
+                        UPI / Google Pay
+                    </td>
+
+                    <td>
+
+                        <span class="payment-status successful">
+                            Successful
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

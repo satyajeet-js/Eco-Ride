@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>stations - Eco-Ride Admin</title>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+<link rel="stylesheet" href="../../CSS/admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav>
+
+<ul>
+
+<li class="admin-logo">
+
+<a href="index.html">
+
+<div class="logo-box">
+<span class="material-symbols-outlined">shield</span>
+</div>
+
+<div class="logo-text">
+
+<span class="logo-title">
+Admin Panel
+</span>
+
+<span class="logo-subtitle">
+Eco-Ride Control
+</span>
+
+</div>
+
+</a>
+
+</li>
+
+
+<li class="sidebar-link">
+<a href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="users.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Users</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="bicycles.html">
+<span class="material-symbols-outlined">directions_bike</span>
+<span>Bicycles</span>
+</a>
+</li>
+
+
+
+
+<li class="sidebar-link active">
+    <a href="stations.html">
+        <span class="material-symbols-outlined">location_on</span>
+        <span>Stations</span>
+    </a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="rides.html">
+<span class="material-symbols-outlined">route</span>
+<span>Rides</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="payments.html">
+<span class="material-symbols-outlined">credit_card</span>
+<span>Payments</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="maintenance.html">
+<span class="material-symbols-outlined">build</span>
+<span>Maintenance</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="analytics.html">
+<span class="material-symbols-outlined">analytics</span>
+<span>Analytics</span>
+</a>
+</li>
+
+
+<li class="back-user">
+
+<a href="../Index/index.html">
+
+<span class="material-symbols-outlined">
+arrow_back
+</span>
+
+<span>
+Back to User
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main class="station-page">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="page-header">
+
+            <div>
+                <h1>Station Management</h1>
+
+                <p>8 active docking stations</p>
+            </div>
+
+            <button class="add-station-btn" onclick="openStationModal()">
+
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+
+                Add Station
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <div class="search-container">
+
+            <span class="material-symbols-outlined search-icon">
+                search
+            </span>
+
+            <input
+                type="text"
+                id="searchStation"
+                placeholder="Search stations..."
+                onkeyup="searchStations()"
+            >
+
+        </div>
+
+
+        <!-- ================= TABLE ================= -->
+
+        <div class="station-table-container">
+
+            <table id="stationTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>STATION</th>
+
+                        <th>BIKES AVAILABLE</th>
+
+                        <th>EMPTY SLOTS</th>
+
+                        <th>CAPACITY</th>
+
+                        <th>STATUS</th>
+
+                        <th>ACTIONS</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <!-- FC ROAD -->
+
+                    <tr>
+
+                        <td>
+                            <span class="station-name">
+                                FC Road Hub
+                            </span>
+                        </td>
+
+                        <td>
+                            12 Bikes
+                        </td>
+
+                        <td>
+                            8 Slots
+                        </td>
+
+                        <td>
+                            20 Total
+                        </td>
+
+                        <td>
+
+                            <span class="status operational">
+                                Operational
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="manage-btn"
+                                onclick="manageStation('FC Road Hub')"
+                            >
+                                Manage
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DECCAN -->
+
+                    <tr>
+
+                        <td>
+                            <span class="station-name">
+                                Deccan Gymkhana
+                            </span>
+                        </td>
+
+                        <td>
+                            7 Bikes
+                        </td>
+
+                        <td>
+                            13 Slots
+                        </td>
+
+                        <td>
+                            20 Total
+                        </td>
+
+                        <td>
+
+                            <span class="status operational">
+                                Operational
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="manage-btn"
+                                onclick="manageStation('Deccan Gymkhana')"
+                            >
+                                Manage
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- SHIVAJINAGAR -->
+
+                    <tr>
+
+                        <td>
+                            <span class="station-name">
+                                Shivajinagar Metro
+                            </span>
+                        </td>
+
+                        <td>
+                            18 Bikes
+                        </td>
+
+                        <td>
+                            2 Slots
+                        </td>
+
+                        <td>
+                            20 Total
+                        </td>
+
+                        <td>
+
+                            <span class="status operational">
+                                Operational
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="manage-btn"
+                                onclick="manageStation('Shivajinagar Metro')"
+                            >
+                                Manage
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+
+    <script src="../../JavaScript/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,984 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7fafb;
+
+    color: #07132f;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.how-hero {
+    width: 100%;
+
+    min-height: 330px;
+
+    padding: 60px 20px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #effbf8 0%,
+            #f7fafb 100%
+        );
+}
+
+
+/* Small green label */
+
+.section-label {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #e7faf3;
+
+    color: #00855f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+
+/* Main heading */
+
+.how-hero h1 {
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.2px;
+
+    font-weight: 750;
+
+    margin-bottom: 18px;
+}
+
+
+/* Description */
+
+.how-hero p {
+    max-width: 720px;
+
+    font-size: 19px;
+
+    line-height: 1.55;
+
+    color: #294466;
+}
+
+
+/* =========================================
+   STEPS SECTION
+========================================= */
+
+.steps-section {
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    padding: 35px 0 65px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   STEP CARD
+========================================= */
+
+.step-card {
+    width: 100%;
+
+    min-height: 190px;
+
+    padding: 28px 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7edf1;
+
+    border-radius: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        96px
+        75px
+        1fr;
+
+    align-items: center;
+
+    column-gap: 18px;
+
+    box-shadow:
+        0 8px 28px rgba(24, 53, 83, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Card hover */
+
+.step-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 13px 32px rgba(24, 53, 83, 0.10);
+}
+
+
+/* =========================================
+   STEP ICON
+========================================= */
+
+.step-icon {
+    width: 74px;
+
+    height: 74px;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 34px;
+
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+
+/* Green */
+
+.green-icon {
+    background: #e9fbf4;
+
+    color: #009c6d;
+}
+
+
+/* Blue */
+
+.blue-icon {
+    background: #edf4ff;
+
+    color: #1166e8;
+}
+
+
+/* Orange */
+
+.orange-icon {
+    background: #fff8e8;
+
+    color: #db7800;
+}
+
+
+/* Purple */
+
+.purple-icon {
+    background: #f3f0ff;
+
+    color: #7434e8;
+}
+
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.step-number {
+    font-size: 42px;
+
+    line-height: 1;
+
+    font-weight: 750;
+
+    color: #f0f4f8;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================================
+   STEP CONTENT
+========================================= */
+
+.step-content h2 {
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+
+.step-content p {
+    max-width: 820px;
+
+    font-size: 18px;
+
+    line-height: 1.55;
+
+    color: #294466;
+}
+
+
+/* =========================================
+   FEATURES SECTION
+========================================= */
+
+.features-section {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 65px 0 85px;
+}
+
+
+.features-header {
+    text-align: center;
+
+    margin-bottom: 48px;
+}
+
+
+.features-header h2 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   FEATURES GRID
+========================================= */
+
+.features-grid {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   FEATURE CARD
+========================================= */
+
+.feature-card {
+    min-height: 240px;
+
+    padding: 35px 36px;
+
+    border: 1px solid #e3ebef;
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #bcebdc;
+
+    box-shadow:
+        0 10px 28px rgba(20, 60, 70, 0.08);
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.feature-icon {
+    width: 54px;
+
+    height: 54px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    background: #e9faf4;
+
+    color: #009c6d;
+
+    font-size: 27px;
+}
+
+
+/* =========================================
+   FEATURE TEXT
+========================================= */
+
+.feature-card h3 {
+    font-size: 21px;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+
+.feature-card p {
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    color: #496381;
+}
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+    width: min(1200px, 92%);
+
+    margin: 65px auto;
+
+    min-height: 350px;
+
+    border-radius: 30px;
+
+    background: #079d6e;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 55px 20px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.cta-content h2 {
+    font-size: 43px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 14px;
+}
+
+
+.cta-content p {
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    margin-bottom: 36px;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.cta-button {
+    min-width: 260px;
+
+    height: 64px;
+
+    padding: 0 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    border-radius: 17px;
+
+    background: #ffffff;
+
+    color: #007b55;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.cta-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.arrow {
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 25px;
+
+    text-align: center;
+
+    border-top: 1px solid #e2e9ed;
+
+    background: #f7fafb;
+
+    color: #60758e;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   LAPTOP
+   HP Pavilion 14 / 1366px / 1440px
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .how-hero {
+        min-height: 300px;
+
+        padding-top: 50px;
+    }
+
+
+    .how-hero h1 {
+        font-size: 43px;
+    }
+
+
+    .how-hero p {
+        font-size: 18px;
+    }
+
+
+    .steps-section {
+        width: 90%;
+
+        padding-top: 30px;
+    }
+
+
+    .step-card {
+        min-height: 175px;
+
+        padding: 25px 32px;
+
+        grid-template-columns:
+            85px
+            65px
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    .step-icon {
+        width: 66px;
+
+        height: 66px;
+
+        border-radius: 21px;
+
+        font-size: 30px;
+    }
+
+
+    .step-number {
+        font-size: 36px;
+    }
+
+
+    .step-content h2 {
+        font-size: 23px;
+    }
+
+
+    .step-content p {
+        font-size: 16px;
+    }
+
+
+    .features-grid {
+        gap: 20px;
+    }
+
+
+    .feature-card {
+        padding: 28px;
+
+        min-height: 220px;
+    }
+
+
+    .feature-card h3 {
+        font-size: 19px;
+    }
+
+
+    .feature-card p {
+        font-size: 15px;
+    }
+
+
+    .cta-section {
+        min-height: 320px;
+
+        margin-top: 50px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .features-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .step-card {
+        grid-template-columns:
+            75px
+            60px
+            1fr;
+
+        padding: 23px 27px;
+    }
+
+
+    .step-icon {
+        width: 62px;
+
+        height: 62px;
+
+        font-size: 27px;
+    }
+
+
+    .step-number {
+        font-size: 32px;
+    }
+
+
+    .step-content h2 {
+        font-size: 21px;
+    }
+
+
+    .step-content p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Hero */
+
+    .how-hero {
+        min-height: 260px;
+
+        padding:
+            45px
+            20px
+            35px;
+    }
+
+
+    .section-label {
+        font-size: 12px;
+
+        padding: 6px 12px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .how-hero h1 {
+        font-size: 34px;
+
+        letter-spacing: -0.7px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .how-hero p {
+        font-size: 15px;
+
+        max-width: 400px;
+    }
+
+
+    /* Steps */
+
+    .steps-section {
+        width: 90%;
+
+        padding:
+            25px
+            0
+            45px;
+
+        gap: 18px;
+    }
+
+
+    .step-card {
+        min-height: auto;
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+        display: grid;
+
+        grid-template-columns:
+            58px
+            45px
+            1fr;
+
+        gap: 10px;
+
+        align-items: start;
+    }
+
+
+    .step-icon {
+        width: 52px;
+
+        height: 52px;
+
+        border-radius: 16px;
+
+        font-size: 23px;
+    }
+
+
+    .step-number {
+        font-size: 27px;
+
+        padding-top: 10px;
+    }
+
+
+    .step-content {
+        padding-top: 3px;
+    }
+
+
+    .step-content h2 {
+        font-size: 18px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .step-content p {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* Features */
+
+    .features-section {
+        padding:
+            45px
+            0
+            55px;
+    }
+
+
+    .features-header {
+        margin-bottom: 30px;
+    }
+
+
+    .features-header h2 {
+        font-size: 30px;
+    }
+
+
+    .features-grid {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .feature-card {
+        min-height: auto;
+
+        padding: 23px;
+
+        border-radius: 19px;
+    }
+
+
+    .feature-icon {
+        width: 46px;
+
+        height: 46px;
+
+        border-radius: 13px;
+
+        margin-bottom: 18px;
+
+        font-size: 23px;
+    }
+
+
+    .feature-card h3 {
+        font-size: 18px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .feature-card p {
+        font-size: 14px;
+    }
+
+
+    /* CTA */
+
+    .cta-section {
+        width: 90%;
+
+        min-height: 290px;
+
+        margin:
+            35px
+            auto
+            45px;
+
+        padding: 40px 20px;
+
+        border-radius: 24px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 30px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .cta-content p {
+        font-size: 16px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .cta-button {
+        min-width: 225px;
+
+        height: 55px;
+
+        padding: 0 20px;
+
+        border-radius: 14px;
+
+        font-size: 15px;
+
+        gap: 12px;
+    }
+
+
+    .arrow {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .how-hero h1 {
+        font-size: 30px;
+    }
+
+
+    .how-hero p {
+        font-size: 14px;
+    }
+
+
+    .step-card {
+        grid-template-columns:
+            50px
+            38px
+            1fr;
+
+        padding: 17px;
+    }
+
+
+    .step-icon {
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 20px;
+    }
+
+
+    .step-number {
+        font-size: 23px;
+    }
+
+
+    .step-content h2 {
+        font-size: 16px;
+    }
+
+
+    .step-content p {
+        font-size: 13px;
+    }
+
+
+    .features-header h2 {
+        font-size: 27px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 27px;
+    }
+
+}

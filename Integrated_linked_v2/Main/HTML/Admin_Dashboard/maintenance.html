@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bicycles - Eco-Ride Admin</title>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+<link rel="stylesheet" href="../../CSS/admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav>
+
+<ul>
+
+<li class="admin-logo">
+
+<a href="index.html">
+
+<div class="logo-box">
+<span class="material-symbols-outlined">shield</span>
+</div>
+
+<div class="logo-text">
+
+<span class="logo-title">
+Admin Panel
+</span>
+
+<span class="logo-subtitle">
+Eco-Ride Control
+</span>
+
+</div>
+
+</a>
+
+</li>
+
+
+<li class="sidebar-link">
+<a href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="users.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Users</span>
+</a>
+</li>
+
+
+<li class="sidebar-link ">
+<a href="bicycles.html">
+<span class="material-symbols-outlined">directions_bike</span>
+<span>Bicycles</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="stations.html">
+<span class="material-symbols-outlined">location_on</span>
+<span>Stations</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="rides.html">
+<span class="material-symbols-outlined">route</span>
+<span>Rides</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="payments.html">
+<span class="material-symbols-outlined">credit_card</span>
+<span>Payments</span>
+</a>
+</li>
+
+
+<li class="sidebar-link active">
+<a href="maintenance.html">
+<span class="material-symbols-outlined">build</span>
+<span>Maintenance</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="analytics.html">
+<span class="material-symbols-outlined">analytics</span>
+<span>Analytics</span>
+</a>
+</li>
+
+
+<li class="back-user">
+
+<a href="../Index/index.html">
+
+<span class="material-symbols-outlined">
+arrow_back
+</span>
+
+<span>
+Back to User
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main class="maintenance-main">
+
+    <!-- PAGE HEADER -->
+    <div class="maintenance-header">
+
+        <h1>Maintenance</h1>
+
+        <p>2 cycles need attention</p>
+
+    </div>
+
+
+    <!-- MAINTENANCE CARDS -->
+    <section class="maintenance-grid">
+
+
+        <!-- CARD 1 -->
+        <div class="maintenance-card">
+
+            <!-- TOP -->
+            <div class="maintenance-top">
+
+                <div class="bike-info">
+
+                    <div class="maintenance-icon">
+
+                        <span class="material-symbols-outlined">
+                            build
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <h2>CY-110</h2>
+
+                        <p>Trail Pro · Kothrud</p>
+
+                    </div>
+
+                </div>
+
+
+                <span class="maintenance-status">
+                    maintenance
+                </span>
+
+            </div>
+
+
+            <!-- LAST SERVICE -->
+            <div class="service-info">
+
+                <span class="material-symbols-outlined">
+                    schedule
+                </span>
+
+                <span>
+                    Last serviced: 10 Aug
+                </span>
+
+            </div>
+
+
+            <!-- BUTTON -->
+            <button
+                class="fixed-btn"
+                onclick="markFixed(this, 'CY-110')">
+
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+
+                Mark as Fixed
+
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+        <div class="maintenance-card">
+
+            <!-- TOP -->
+            <div class="maintenance-top">
+
+                <div class="bike-info">
+
+                    <div class="maintenance-icon">
+
+                        <span class="material-symbols-outlined">
+                            build
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <h2>CY-112</h2>
+
+                        <p>Trail Pro · Viman Nagar</p>
+
+                    </div>
+
+                </div>
+
+
+                <span class="maintenance-status">
+                    maintenance
+                </span>
+
+            </div>
+
+
+            <!-- LAST SERVICE -->
+            <div class="service-info">
+
+                <span class="material-symbols-outlined">
+                    schedule
+                </span>
+
+                <span>
+                    Last serviced: 12 Aug
+                </span>
+
+            </div>
+
+
+            <!-- BUTTON -->
+            <button
+                class="fixed-btn"
+                onclick="markFixed(this, 'CY-112')">
+
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+
+                Mark as Fixed
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+    <script src="../../JavaScript/admin.js"></script>
+</body>
+
+</html>

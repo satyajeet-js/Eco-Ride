@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bicycles - Eco-Ride Admin</title>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+<link rel="stylesheet" href="../../CSS/admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav>
+
+<ul>
+
+<li class="admin-logo">
+
+<a href="index.html">
+
+<div class="logo-box">
+<span class="material-symbols-outlined">shield</span>
+</div>
+
+<div class="logo-text">
+
+<span class="logo-title">
+Admin Panel
+</span>
+
+<span class="logo-subtitle">
+Eco-Ride Control
+</span>
+
+</div>
+
+</a>
+
+</li>
+
+
+<li class="sidebar-link">
+<a href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="users.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Users</span>
+</a>
+</li>
+
+<li class="sidebar-link ">
+<a href="bicycles.html">
+<span class="material-symbols-outlined">directions_bike</span>
+<span>Bicycles</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="stations.html">
+<span class="material-symbols-outlined">location_on</span>
+<span>Stations</span>
+</a>
+</li>
+
+
+<li class="sidebar-link active">
+<a href="rides.html">
+<span class="material-symbols-outlined">route</span>
+<span>Rides</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="payments.html">
+<span class="material-symbols-outlined">credit_card</span>
+<span>Payments</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="maintenance.html">
+<span class="material-symbols-outlined">build</span>
+<span>Maintenance</span>
+</a>
+</li>
+
+
+<li class="sidebar-link">
+<a href="analytics.html">
+<span class="material-symbols-outlined">analytics</span>
+<span>Analytics</span>
+</a>
+</li>
+
+
+<li class="back-user">
+
+<a href="../Index/index.html">
+
+<span class="material-symbols-outlined">
+arrow_back
+</span>
+
+<span>
+Back to User
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main class="rides-main">
+
+    <!-- PAGE HEADER -->
+    <div class="rides-header">
+
+        <h1>All Rides</h1>
+
+        <p>5 total rides recorded this session</p>
+
+    </div>
+
+
+    <!-- RIDES TABLE -->
+    <div class="rides-table-container">
+
+        <table class="rides-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>RIDE ID</th>
+
+                    <th>ROUTE</th>
+
+                    <th>BIKE</th>
+
+                    <th>DURATION</th>
+
+                    <th>DISTANCE</th>
+
+                    <th>FARE</th>
+
+                    <th>STATUS</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <!-- RIDE 1 -->
+                <tr>
+
+                    <td class="ride-id">
+                        RD-901
+                    </td>
+
+                    <td>
+                        FC Road → Deccan
+                    </td>
+
+                    <td>
+                        CY-101
+                    </td>
+
+                    <td>
+                        14 mins
+                    </td>
+
+                    <td>
+                        2.4 km
+                    </td>
+
+                    <td class="fare">
+                        ₹27
+                    </td>
+
+                    <td>
+
+                        <span class="ride-status completed">
+                            Completed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- RIDE 2 -->
+                <tr>
+
+                    <td class="ride-id">
+                        RD-902
+                    </td>
+
+                    <td>
+                        Kothrud → JM Road
+                    </td>
+
+                    <td>
+                        CY-105
+                    </td>
+
+                    <td>
+                        22 mins
+                    </td>
+
+                    <td>
+                        4.1 km
+                    </td>
+
+                    <td class="fare">
+                        ₹45
+                    </td>
+
+                    <td>
+
+                        <span class="ride-status completed">
+                            Completed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- RIDE 3 -->
+                <tr>
+
+                    <td class="ride-id">
+                        RD-903
+                    </td>
+
+                    <td>
+                        Shivajinagar → FC Road
+                    </td>
+
+                    <td>
+                        CY-108
+                    </td>
+
+                    <td>
+                        8 mins
+                    </td>
+
+                    <td>
+                        1.2 km
+                    </td>
+
+                    <td class="fare">
+                        ₹15
+                    </td>
+
+                    <td>
+
+                        <span class="ride-status completed">
+                            Completed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

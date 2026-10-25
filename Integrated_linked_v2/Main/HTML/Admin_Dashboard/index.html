@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Eco-Ride</title>
+
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+    <link rel="stylesheet" href="../../CSS/admin.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <ul>
+
+               
+                <li class="admin-logo">
+
+                    <a href="index.html">
+
+                        <div class="logo-box">
+                            <span class="material-symbols-outlined">
+                                shield
+                            </span>
+                        </div>
+
+                        <div class="logo-text">
+
+                            <span class="logo-title">
+                                Admin Panel
+                            </span>
+
+                            <span class="logo-subtitle">
+                                Eco-Ride Control
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </li>
+
+
+                <!-- OVERVIEW -->
+                <li class="sidebar-link active">
+
+                    <a href="index.html">
+
+                        <span class="material-symbols-outlined">
+                            dashboard
+                        </span>
+
+                        <span>
+                            Overview
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- USERS -->
+                <li class="sidebar-link">
+
+                    <a href="users.html">
+
+                        <span class="material-symbols-outlined">
+                            groups
+                        </span>
+
+                        <span>
+                            Users
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- BICYCLES -->
+                <li class="sidebar-link">
+
+                    <a href="bicycles.html">
+
+                        <span class="material-symbols-outlined">
+                            directions_bike
+                        </span>
+
+                        <span>
+                            Bicycles
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- STATIONS -->
+                <li class="sidebar-link">
+
+                    <a href="stations.html">
+
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+
+                        <span>
+                            Stations
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- RIDES -->
+                <li class="sidebar-link">
+
+                    <a href="rides.html">
+
+                        <span class="material-symbols-outlined">
+                            route
+                        </span>
+
+                        <span>
+                            Rides
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- PAYMENTS -->
+                <li class="sidebar-link">
+
+                    <a href="payments.html">
+
+                        <span class="material-symbols-outlined">
+                            credit_card
+                        </span>
+
+                        <span>
+                            Payments
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- MAINTENANCE -->
+                <li class="sidebar-link">
+
+                    <a href="maintenance.html">
+
+                        <span class="material-symbols-outlined">
+                            build
+                        </span>
+
+                        <span>
+                            Maintenance
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- ANALYTICS -->
+                <li class="sidebar-link">
+
+                    <a href="analytics.html">
+
+                        <span class="material-symbols-outlined">
+                            analytics
+                        </span>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- BACK TO USER -->
+                <li class="back-user">
+
+                    <a href="../Index/index.html">
+
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                        </span>
+
+                        <span>
+                            Back to User
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <h1 class="page-title">
+            Admin Dashboard
+        </h1>
+
+        <p class="page-subtitle">
+            Real-time overview of Eco-Ride operations
+        </p>
+
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <span class="material-symbols-outlined">
+                        groups
+                    </span>
+                </div>
+
+                <h2>10,248</h2>
+
+                <p>Total Users</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <span class="material-symbols-outlined">
+                        directions_bike
+                    </span>
+                </div>
+
+                <h2>250</h2>
+
+                <p>Total Cycles</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <span class="material-symbols-outlined">
+                        route
+                    </span>
+                </div>
+
+                <h2>0</h2>
+
+                <p>Active Rides</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <span class="material-symbols-outlined">
+                        currency_rupee
+                    </span>
+                </div>
+
+                <h2>₹4,82,450</h2>
+
+                <p>Total Revenue</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATION STATUS -->
+
+        <div class="table-container">
+
+            <h2>
+                Station Status
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Station</th>
+                        <th>Total Cycles</th>
+                        <th>Available</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>FC Road</td>
+                        <td>20</td>
+                        <td>12</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deccan</td>
+                        <td>20</td>
+                        <td>7</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shivajinagar</td>
+                        <td>20</td>
+                        <td>18</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>Kothrud</td>
+                        <td>20</td>
+                        <td>9</td>
+                        <td>Active</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

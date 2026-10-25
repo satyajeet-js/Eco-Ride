@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eco-Ride - Login</title>
+
+    <link rel="stylesheet" href="../../CSS/Login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+        <h1 class="welcome-title">
+    Welcome Back
+    <video
+        src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/waving-hand-animation-gif-download-5601973.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+    ></video>
+</h1>
+
+            <p class="subtitle">
+                Log in to your Eco-Ride account.
+            </p>
+
+
+            <form id="loginForm">
+
+                <!-- ================= EMAIL ================= -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <div class="input-box">
+
+                        <img
+                            class="input-icon"
+                            src="https://img.icons8.com/?size=100&id=89362&format=png&color=000000"
+                            alt="Email"
+                        >
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= PASSWORD ================= -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <img
+                            class="input-icon"
+                            src="https://img.icons8.com/?size=100&id=QfPE9qQr4Zv3&format=png&color=000000"
+                            alt="Password"
+                        >
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="showPassword"
+                            class="eye-btn"
+                        >
+
+                            <img
+                                id="eyeIcon"
+                                src="https://img.icons8.com/?size=100&id=5XiJ2fH1HjKN&format=png&color=000000"
+                                alt="Show password"
+                            >
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= OPTIONS ================= -->
+
+                <div class="options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- ================= LOGIN BUTTON ================= -->
+
+                <button
+                    type="submit"
+                    id="loginBtn"
+                    class="login-btn"
+                >
+
+                    <span>
+                        Login
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- ================= MESSAGE ================= -->
+
+                <p id="message"></p>
+
+
+                <!-- ================= REGISTER ================= -->
+
+                <p class="register">
+
+                    Don't have an account?
+
+                    <a href="#">
+                        Create Account
+                    </a>
+
+                </p>
+
+
+                <!-- ================= DEMO ================= -->
+
+                <p class="demo">
+                    Demo mode — any email/password works.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script >
+
+        // ========================================
+// GET HTML ELEMENTS
+// ========================================
+
+const loginForm =
+    document.querySelector("#loginForm");
+
+const password =
+    document.querySelector("#password");
+
+const showPassword =
+    document.querySelector("#showPassword");
+
+const eyeIcon =
+    document.querySelector("#eyeIcon");
+
+const message =
+    document.querySelector("#message");
+
+const loginBtn =
+    document.querySelector("#loginBtn");
+
+
+// ========================================
+// SHOW / HIDE PASSWORD
+// ========================================
+
+showPassword.addEventListener("click", function () {
+
+    // Check current password type
+
+    if (password.type === "password") {
+
+        // Show password
+
+        password.type = "text";
+
+
+        // Change icon
+
+        eyeIcon.src =
+            "https://img.icons8.com/?size=100&id=121529&format=png&color=000000";
+
+        eyeIcon.alt = "Hide password";
+
+    }
+
+    else {
+
+
+        password.type = "password";
+
+        eyeIcon.src =
+            "https://img.icons8.com/?size=100&id=5XiJ2fH1HjKN&format=png&color=000000";
+
+        eyeIcon.alt = "Show password";
+
+    }
+
+});
+
+
+loginForm.addEventListener(
+    "submit",
+    async function (event) {
+
+
+        event.preventDefault();
+        const email =
+            document.querySelector("#email").value.trim();
+
+        const pass =
+            document.querySelector("#password").value;
+
+
+        console.log("Email:", email);
+
+        console.log("Password:", pass);
+
+
+        if (!email || !pass) {
+
+            message.textContent =
+                "Please enter email and password.";
+
+            message.style.color = "red";
+
+            return;
+        }
+
+
+        loginBtn.disabled = true;
+
+        loginBtn.innerHTML =
+            "Logging in...";
+
+
+        message.textContent = "";
+        try {
+
+            const response = await fetch(
+                "http://localhost:5000/login",
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body: JSON.stringify({
+
+                        email: email,
+
+                        password: pass
+
+                    })
+
+                }
+            );
+
+            const data =
+                await response.json();
+
+
+         
+
+            if (response.ok) {
+
+                message.textContent =
+                    data.message;
+
+                message.style.color =
+                    "green";
+
+
+            }
+            else {
+
+                message.textContent =
+                    data.message ||
+                    "Login failed.";
+
+                message.style.color =
+                    "red";
+
+            }
+
+        }
+
+        catch (error) {
+
+            console.log("Error:", error);
+
+            message.textContent =
+                "Unable to connect to server.";
+
+            message.style.color =
+                "red";
+
+        }
+
+
+        loginBtn.disabled = false;
+
+        loginBtn.innerHTML = `
+            <span>Login</span>
+            <span>→</span>
+        `;
+
+    }
+);
+    </script>
+
+</body>
+
+</html>

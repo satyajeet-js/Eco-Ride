@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleGo - Register</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/registers.css">
+</head>
+
+<body>
+
+    <section class="register-section">
+        <div class="register-container">
+
+           
+            <div class="intro-box">
+                <div class="intro-content">
+                    <div class="logo-box">
+                        <img src="../../Icons%20Library/cycle-removebg-preview.png" alt="logo" width="100%" height="80%">
+                    </div>
+
+                    <h1>
+                        Join the CycleGo
+                        <br>
+                        community
+                    </h1>
+
+                    <p class="intro-text">
+                        Sign up free and get ₹50 in ride credits to start exploring Pune on two wheels.
+                    </p>
+
+                    <div class="features">
+                        <div class="feature">
+                            <span>✓</span>
+                            <p>No security deposit required</p>
+                        </div>
+                        <div class="feature">
+                            <span>✓</span>
+                            <p>Unlock any bike in 3 seconds</p>
+                        </div>
+                        <div class="feature">
+                            <span>✓</span>
+                            <p>Pause or cancel anytime</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-footer">
+                    <p>© 2026 CycleGo Mobility Pvt. Ltd.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: INTERACTIVE FORM -->
+            <div class="form-box">
+                <div class="form-header">
+                    <h2>Create Your Account</h2>
+                    <p>Join 10,000+ active riders across Pune.</p>
+                </div>
+
+                <form action="/register" method="post" id="register" novalidate>
+
+                    <!-- NAME -->
+                    <div class="form-group" id="nameGroup">
+                        <label for="name">Full Name</label>
+                        <div class="input-box">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="name" name="name" placeholder="Satyajeet Patil" autocomplete="name">
+                        </div>
+                        <small id="nameError"></small>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group" id="emailGroup">
+                        <label for="email">Email Address</label>
+                        <div class="input-box">
+                            <span class="input-icon">✉</span>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                        </div>
+                        <small id="emailError"></small>
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="form-group" id="phoneGroup">
+                        <label for="phone">Mobile Number</label>
+                        <div class="input-box">
+                            <span class="input-icon">📱</span>
+                            <input type="tel" id="phone" name="phone" placeholder="9876543210" maxlength="10" autocomplete="tel">
+                        </div>
+                        <small id="phoneError"></small>
+                    </div>
+
+                    <!-- PASSWORD ROW -->
+                    <div class="password-row">
+                        <!-- PASSWORD -->
+                        <div class="form-group" id="passGroup">
+                            <label for="pass">Password</label>
+                            <div class="input-box">
+                                <span class="input-icon">🔒</span>
+                                <input type="password" id="pass" name="pass" placeholder="••••••••">
+                                <button type="button" class="show-password" id="showPassword">👁</button>
+                            </div>
+                            <small id="passError"></small>
+                        </div>
+
+                        <!-- CONFIRM PASSWORD -->
+                        <div class="form-group" id="confirmGroup">
+                            <label for="confirm">Confirm</label>
+                            <div class="input-box">
+                                <span class="input-icon">🔒</span>
+                                <input type="password" id="confirm" name="confirm" placeholder="••••••••">
+                            </div>
+                            <small id="confirmError"></small>
+                        </div>
+                    </div>
+
+                    <!-- TERMS -->
+                    <div class="terms-wrapper">
+                        <div class="terms">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms">
+                                I agree to the <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <small id="termsError"></small>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="register-btn">
+                        <span>Create Account</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                    <p class="login-text">
+                        Already have an account? <a href="#">Log in</a>
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ENHANCED SCRIPT WITH PASSWORD TOGGLE -->
+    <script>
+        const form = document.getElementById("register");
+        const showPasswordBtn = document.getElementById("showPassword");
+        const passInput = document.getElementById("pass");
+        const confirmInput = document.getElementById("confirm");
+
+        // Toggle Password Visibility
+        showPasswordBtn.addEventListener("click", () => {
+            const type = passInput.getAttribute("type") === "password" ? "text" : "password";
+            passInput.setAttribute("type", type);
+            showPasswordBtn.style.opacity = type === "text" ? "1" : "0.5";
+        });
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const termsInput = document.getElementById("terms");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const phoneError = document.getElementById("phoneError");
+        const passError = document.getElementById("passError");
+        const confirmError = document.getElementById("confirmError");
+        const termsError = document.getElementById("termsError");
+
+        form.addEventListener("submit", function (event) {
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const pass = passInput.value;
+            const confirm = confirmInput.value;
+
+            let valid = true;
+
+            nameError.textContent = "";
+            emailError.textContent = "";
+            phoneError.textContent = "";
+            passError.textContent = "";
+            confirmError.textContent = "";
+            termsError.textContent = "";
+
+            // Validation checks
+            if (name === "") {
+                nameError.textContent = "Name is required";
+                valid = false;
+            } else if (name.length < 3) {
+                nameError.textContent = "Name must contain at least 3 characters";
+                valid = false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "") {
+                emailError.textContent = "Email is required";
+                valid = false;
+            } else if (!emailPattern.test(email)) {
+                emailError.textContent = "Enter a valid email address";
+                valid = false;
+            }
+
+            const phonePattern = /^[6-9]\d{9}$/;
+            if (phone === "") {
+                phoneError.textContent = "Mobile number is required";
+                valid = false;
+            } else if (!phonePattern.test(phone)) {
+                phoneError.textContent = "Enter a valid 10-digit mobile number";
+                valid = false;
+            }
+
+            if (pass === "") {
+                passError.textContent = "Password is required";
+                valid = false;
+            } else if (pass.length < 6) {
+                passError.textContent = "Minimum 6 characters required";
+                valid = false;
+            }
+
+            if (confirm === "") {
+                confirmError.textContent = "Please confirm password";
+                valid = false;
+            } else if (confirm !== pass) {
+                confirmError.textContent = "Passwords do not match";
+                valid = false;
+            }
+
+            if (!termsInput.checked) {
+                termsError.textContent = "You must accept the terms to proceed";
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            } else {
+                event.preventDefault();
+                alert("Account created successfully! (Demo mode)");
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>
